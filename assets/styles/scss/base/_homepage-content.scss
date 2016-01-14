@@ -1,0 +1,55 @@
+$button-border-inactive: #A298F7;
+$button-background-inactive: #D1CCF7;
+$button-color-inactive: white;
+
+section.homepage-content {
+  @include outer-container;
+  @include span-columns(12);
+}
+
+
+
+.accordion-tabs {
+  $large-screen: em(860) !default;
+  @include span-columns(8 of 12);
+  @include shift(2);
+
+
+  @include clearfix;
+  padding: 0;
+
+  .tab-header-and-content {
+    list-style: none;
+    border: 1px solid $button-border-inactive;
+    background-color: $button-background-inactive;
+    margin-right: 200px;
+
+
+
+    @include media($large-screen) {
+      display: inline;
+    }
+  }
+
+  .tab-link {
+    display: initial;
+    padding-right: 1em;
+
+    @include media($large-screen) {
+      display: inline-block;
+    }
+  }
+
+  .is-active {
+    color: #ff0000;
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+
+    @include media($large-screen) {
+      float: left;
+    }
+  }
+}
